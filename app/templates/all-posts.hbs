@@ -7,6 +7,12 @@
   {{/link-to}}
 </div>
 
-{{#each model as |postUnit|}}
-  {{post-listing post=postUnit}}
-{{/each}}
+{{#list-filter
+   filter=(action 'filterBySubject')
+   as |post|}}
+  <ul class="results">
+    {{#each model as |postUnit|}}
+      {{post-listing post=postUnit}}
+    {{/each}}
+  </ul>
+{{/list-filter}}
