@@ -7,14 +7,6 @@
   {{/link-to}}
 </div>
 
-{{#each model as |posts|}}
-  <article class="listing">
-    <h3>{{posts.title}}</h3>
-    <div class="detail owner">
-      <span>Author:</span> {{posts.author}}
-    </div>
-    <div class="detail type">
-      <span>Subject:</span> {{posts.subject}}
-    </div>
-  </article>
+{{#each model as |postUnit|}}
+  {{post-listing post=postUnit}}
 {{/each}}
