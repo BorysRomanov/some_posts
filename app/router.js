@@ -8,7 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('about');
-  this.route('all-posts');
+  this.route('all-posts', function() {
+    this.route('show', { path: '/:post_id' });
+  });
 });
 
 export default Router;

@@ -1,0 +1,10 @@
+{{#list-filter
+   filter=(action 'filterBySubject')
+   as |posts|}}
+  <ul class="results">
+    {{#each posts as |postUnit|}}
+      <li>{{post-listing post=postUnit}}</li>
+    {{/each}}
+  </ul>
+{{/list-filter}}
+{{outlet}}

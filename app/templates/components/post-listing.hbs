@@ -1,5 +1,5 @@
 <article class="listing">
-  <h3>{{post.title}}</h3>
+  <h3>{{#link-to "all-posts.show" post}}{{post.title}}{{/link-to}}</h3>
   <div class="detail author">
     <span>Author:</span> {{post.author}}
   </div>
